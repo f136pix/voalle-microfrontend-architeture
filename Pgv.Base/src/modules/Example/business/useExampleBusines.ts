@@ -12,7 +12,7 @@ import {getCrmForms} from "../service/exampleServices.ts"
 interface UseStore extends DatagridStoreBase<
     DatagridRequestReturnType<CrmFormsResponseDataType>["response"]
 > {
-    // Overrides
+    // Overrides not optional args
     searchFilter: DatagridParamsFilterType
     setSearchFilter: (filter: DatagridParamsFilterType) => void
     advancedFilter: DatagridParamsFilterType
@@ -22,7 +22,7 @@ interface UseStore extends DatagridStoreBase<
 // type UseStore = & DatagridStoreBase
 
 const defaultParams: DatagridParamsType = {
-    PageSize: 10
+    PageSize: 6
 }
 
 const defaultValues: DatagridRequestReturnType["response"] = {
@@ -82,7 +82,7 @@ const useStore = create<UseStore>((set, get) => {
     }
 })
 
-export const useExampleBusiness = () => {
+export const useExampleBusines = () => {
     // Simply passing values from store ahead since there is no embedded business rules
     const {
         fetchData,

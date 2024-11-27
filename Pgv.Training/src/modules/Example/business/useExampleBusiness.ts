@@ -24,7 +24,7 @@ interface UseStore
 }
 
 const defaultParams: DatagridParamsType = {
-  PageSize: 10,
+  PageSize: 6,
 }
 
 const defaultValues = {

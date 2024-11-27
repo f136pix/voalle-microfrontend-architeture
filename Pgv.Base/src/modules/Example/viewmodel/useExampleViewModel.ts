@@ -1,4 +1,4 @@
-﻿import {useExampleBusiness} from "../business/useExampleBusiness.ts"
+﻿import {useExampleBusines} from "../business/useExampleBusines.ts"
 import {GridSortModel} from "@mui/x-data-grid"
 import {onParamOrdering, onParamsSearch as onParamsSearchLib} from "pgv-lib/functions"
 import {DatagridColDef} from "pgv-lib/ui/components"
@@ -16,7 +16,7 @@ export const useExampleViewModel = () => {
         advancedFilter,
         setAdvancedFilter,
         setSearchFilter
-    } = useExampleBusiness()
+    } = useExampleBusines()
 
     // Handles sort changes
     const onSortModelChange = (filter: GridSortModel) => {
@@ -45,6 +45,6 @@ export const useExampleViewModel = () => {
         onSortModelChange,
         onParamsSearch,
         setAdvancedFilter,
-        advancedFilter
+        advancedFilter,
     }
 }
